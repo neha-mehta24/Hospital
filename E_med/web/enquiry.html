@@ -1,5 +1,5 @@
 
-<%@taglib prefix="s" uri="/struts-tags"%>
+
 <title>Seven Hills Hospital</title>
 
 <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -35,60 +35,36 @@
             </ul>
           </li>
          
-          <li ><a href="login.html">Log In</a></li>
+          <li class="selected"><a href="login.html">Log In</a></li>
           <li><a href="contact_us.html">Contact Us</a></li>
-          <li class="selected"><a href="signup.html">Register</a></li>
+          <li><a href="signup.html">Register</a></li>
         </ul>
       </nav>
     </header>
       <div id="site_content">
       <div class="gallery">
-        <img width="1050" height="250" src="images/register.jpg" />
+        <img width="1050" height="250" src="images/enquiry.jpg" />
       </div> 
 <div class="content2">
-
+<br>
 <s:head theme="simple"/></head>
-<center><s:actionmessage/></center>
-<table align="center"><tr><td><h1 align="center">New Registration</h1>
+<s:actionmessage/>
+<table align="center"><tr><td><h1 align="center">Enquiry</h1>
+    <tr><td><s:form action="enquiry" cssClass="form_settings">
+    <s:textfield name="first_name" label="First Name" size="15"/>
 
-    <tr><td><s:form action="signup" cssClass="form_settings">
-    <s:textfield name="u_id" label="Patient Id" size="15"/>
-
-  <s:textfield name="username" label="User Name" size="15" />
-
-  <s:password name="password" label="Password" size="15" />
-
-   <s:password name="cpassword" label="Confirm Password" size="15" />   
-   <s:select name="type" label="Type" list="{'patient'}"/>
-
-  <s:textfield name="fullname" label="Name" size="25" />
-
-  <s:textfield name="dob" label="Date Of Birth" size="25" />
-
-  <s:select name="ques" label="Security Question" list="{'What is your lucky number','What is your favourite color','What is your nick name'}"/>
-
-  <s:textfield name="answer" label="Security Answer" size="15"/>
-
-   <s:textfield name="age" label="Age" size="25" />
-   
-  <s:select name="sex" label="Sex" list="{'Male','Female'}"/>
-
-  
-  <s:textarea name="address" label="Address" rows="4" cols="20"/>
-
-  <s:textfield label="Country" name="country" size="25" />
-  <s:textfield label="State" name="state" size="25" />
-  <s:textfield label="City" name="city" size="25" />
-   <s:textfield label="Contact no" name="contactno" size="25" />
+  <s:textfield name="last_name" label="Last Name" size="15" />
 
   <s:textfield label="Email" name="email" size="25" />
 
-  <s:submit value="Sign Up" cssClass="submit" align="center"/>
+  <s:textarea name="message" label="Message" rows="4" cols="20"/>
+
+  <s:submit value="Send" cssClass="submit" align="center"/>
  
 </s:form>
-
-</table>
          
+</table>
+        
     </div>
     </div>
    <%@include file="footer.html" %>

@@ -1,5 +1,5 @@
 
-<%@taglib prefix="s" uri="/struts-tags"%>
+
 <title>Seven Hills Hospital</title>
 
 <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -41,30 +41,35 @@
         </ul>
       </nav>
     </header>
-      <div id="site_content">
+     <div id="site_content">
       <div class="gallery">
-        <img width="1050" height="250" src="images/enquiry.jpg" />
+        <img width="1050" height="250" src="images/login.jpg" />
       </div> 
-<div class="content2">
-<br>
-<s:head theme="simple"/></head>
-<s:actionmessage/>
-<table align="center"><tr><td><h1 align="center">Enquiry</h1>
-    <tr><td><s:form action="enquiry" cssClass="form_settings">
-    <s:textfield name="first_name" label="First Name" size="15"/>
-
-  <s:textfield name="last_name" label="Last Name" size="15" />
-
-  <s:textfield label="Email" name="email" size="25" />
-
-  <s:textarea name="message" label="Message" rows="4" cols="20"/>
-
-  <s:submit value="Send" cssClass="submit" align="center"/>
- 
-</s:form>
+       
+      <div class="content2">
+          
          
+          <table align="center" border="1">
+              <tr><td>
+          <h1 align="center"><font size="20">Login</font></h1>
+
+    <tr><td><s:form action="LoginAction" cssClass="form_settings"  >
+               
+
+    <s:textfield name="username" label="Username" />
+    <s:password name="password" label="Password" />
+    <s:actionerror/>
+    <s:actionmessage/>
+    <br>
+    <s:submit value="Login" align="center" cssClass="submit"/> 
+    <tr><td><br> <b>Not Registered?</b> <td><br>Click here to <s:a href="signup.html"><b>Register</b></s:a> 
+        | <s:a href="fp.html">forgot Password</s:a> |
+     
+    </s:form>
+                
 </table>
-        
+         
     </div>
     </div>
+    <br><br><br>
    <%@include file="footer.html" %>
